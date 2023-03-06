@@ -71,7 +71,7 @@ alert(resultado);
 
 // EJEMPLO 3 PROMESAS
 
-/*  var Datos = new Promise((resolve, reject) => {
+  var Datos = new Promise((resolve, reject) => {
     setTimeout(() => {
         var teQuiero = 'Yo realmente te quiero'
   
@@ -91,7 +91,7 @@ Datos.then(resultado =>{
 
 .catch(error =>{
    console.log(error);
-}) */
+}) 
 
 // EJEMPLO 4
 
@@ -118,7 +118,7 @@ Supervisores.then((resolve) => {
 
 // EJEMPLO 5
 
-  /*let Personas = new Promise((resolve, reject) => {
+  let Personas = new Promise((resolve, reject) => {
   setTimeout(() => {
     var Hora = 'Alerta'
     Hora = false;
@@ -129,7 +129,7 @@ resolve(Hora)
     }
 
 
-  }, 5000);
+  }, 2000);
 })
 
 Personas.then(resultado =>{
@@ -138,7 +138,7 @@ Personas.then(resultado =>{
 
 .catch(error =>{
   alert(error);
-}) */
+}) 
 
 
 // Ejempplo 6 
@@ -146,6 +146,7 @@ Personas.then(resultado =>{
 var Amor = new Promise((resolve, reject) => {
   setTimeout(() => {
     var Saludo = 'Hola eres Bienvenido'
+    Saludo = false;
    
 if(Saludo){
 resolve(Saludo)
