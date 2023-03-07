@@ -133,11 +133,11 @@ resolve(Hora)
 })
 
 Personas.then(resultado =>{
-  alert(resultado);
+  console.log(resultado);
 })
 
 .catch(error =>{
-  alert(error);
+  console.log(error);
 }) 
 
 
@@ -164,3 +164,29 @@ Amor.then(resultado =>{
 .catch(error =>{
   console.log(error)
 })
+
+//Ejemplo 6
+
+
+
+var Usuarios = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    var Time = 'Ya es hora de ser Productivo.. Hacker';
+    if(Time){
+resolve(Time)
+    }else{
+      reject('No es hora de Hackear');
+    }
+  }, 1000);
+
+
+})
+
+Usuarios.then(resultado =>{
+  alert(resultado)
+})
+
+.catch(error =>{
+  alert(error)
+})
+

@@ -66,3 +66,72 @@ personas1.newAños();
 personas1.newAños();
 personas1.newAños();
 console.log(personas1);
+
+
+//Ejemplo 3 Clases
+
+class Tecnico {
+
+  
+constructor(id, nombre, genero, años){
+  this.id = id;
+  this.nombre = nombre;
+  this.genero = genero;
+  this.años = años;
+}
+
+aumentaAños (){
+  this.años += 2;
+}
+
+disminuyeAños (){
+this.años -= 2;
+
+}
+
+
+}
+
+class newTecnico extends Tecnico {  // Clase Hijo extends
+constructor (id,nombre,genero, años){
+  super(id,nombre,genero,años )
+}
+
+aumentaAños (){
+this.años += 1;
+
+}
+
+}
+
+// Clase Padre
+
+var tecnico1 = new Tecnico(1, 'Julio', 'Masculino', 2000);
+console.log(tecnico1);
+tecnico1.disminuyeAños();
+tecnico1.disminuyeAños();
+tecnico1.disminuyeAños();
+tecnico1.disminuyeAños();
+
+
+document.write('<h2> '+ tecnico1.genero + '<h2/>' );
+
+document.write('<h2> '+ tecnico1.nombre + '<h2/>' );
+
+document.write('<h2> '+ tecnico1.id + '<h2/>' );
+document.write('<h2> '+ tecnico1.años + '<h2/>' );
+
+
+// Clase Hijo
+var newTecnico1 = new newTecnico ( 3, 'Cesar', 'Macho', 3000);
+console.log(newTecnico1);
+
+newTecnico1.aumentaAños();
+newTecnico1.aumentaAños();
+newTecnico1.aumentaAños();
+newTecnico1.aumentaAños();
+
+document.write('<h3>'+newTecnico1.años +  '<h3/>')
+document.write('<h3>'+newTecnico1.id +  '<h3/>')
+document.write('<h3>'+newTecnico1.genero +  '<h3/>')
+document.write('<h3>'+newTecnico1.nombre +  '<h3/>')
