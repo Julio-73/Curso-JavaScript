@@ -135,3 +135,52 @@ document.write('<h3>'+newTecnico1.años +  '<h3/>')
 document.write('<h3>'+newTecnico1.id +  '<h3/>')
 document.write('<h3>'+newTecnico1.genero +  '<h3/>')
 document.write('<h3>'+newTecnico1.nombre +  '<h3/>')
+
+
+// Ejemplo 4 Clases 
+
+
+class Amor{
+constructor(salida,compromiso,crush, años ){
+this.salida = salida;
+this.compromiso = compromiso;
+this.crush = crush;
+this.años = 27;
+
+}
+
+aumentaAños (){
+this.años += 2;
+
+}
+
+disminuyeAños (){
+  this.años -= 2;
+  
+  }
+
+}
+
+{/* Extendiendo Clase*/}
+
+class love extends Amor {
+constructor(salida,compromiso,crush, años ){
+  super(salida,compromiso,crush,años)
+}
+
+
+}
+
+
+
+let love1 = new love('teresa', 'bebe','jenny',30);
+console.log(love1);
+
+let amor1 = new Amor('Rose', 'Yoona', 'Liza', 27);
+
+
+amor1.disminuyeAños();
+amor1.disminuyeAños();
+amor1.disminuyeAños();
+
+document.write('<h2>'+ love1.crush +  '</h2>')

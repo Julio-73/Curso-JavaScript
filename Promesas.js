@@ -169,7 +169,7 @@ Amor.then(resultado =>{
 
 
 
-var Usuarios = new Promise((resolve, reject) => {
+ /* var Usuarios = new Promise((resolve, reject) => {
   setTimeout(() => {
     var Time = 'Ya es hora de ser Productivo.. Hacker';
     if(Time){
@@ -190,3 +190,34 @@ Usuarios.then(resultado =>{
   alert(error)
 })
 
+*/
+
+
+// Ejemplo 6 Promesas
+
+
+
+let Emails = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    var Hora = 'Es la hora punta de estudiar';
+   Hora = false;
+
+if(Hora){
+resolve(Hora)
+
+}else{
+reject('Es hora de Jugar Campeon ')
+
+}
+
+  }, 3000);
+})
+
+Emails.then(resultado => {
+  alert(resultado);
+}
+  )
+
+  .catch(error =>{
+    alert(error);
+  })
